@@ -1,0 +1,22 @@
+
+    {% extends "base.html" %}
+
+    {% block title %}Update Employee{% endblock %}
+    
+    {% block content %}    
+    
+    <h1>Update Employee</h1>
+    
+    <form action="/update" method="post">
+        <input type="text" name="EmployeeID" placeholder="Employee ID" required>
+        <input type="text" name="Firstname" placeholder="Firstname" required>
+        <input type="text" name="Lastname" placeholder="Lastname" required>
+        <input type="text" name="Department" placeholder="Department" required>
+        <input type="text" name="Gender" placeholder="Gender" required>
+        <input type="date" name="Date" placeholder="Date" required>
+        <button type="submit">Update Employee</button>
+    </form>
+{% endblock %}
+
+</body>
+</html>

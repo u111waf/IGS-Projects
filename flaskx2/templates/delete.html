@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Employee{% endblock %}
+
+{% block content %}
+    <h1>Delete Employee</h1>
+
+
+    <hr>
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/delete" method="post">
+        <label for="EmployeeID">Employee ID:</label>
+        <input type="text" name="EmployeeID" placeholder="Employee ID" required>
+        <button type="submit">Delete Employee</button>
+    </form>
+{% endblock %}

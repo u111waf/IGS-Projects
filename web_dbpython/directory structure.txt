@@ -1,0 +1,13 @@
+web_dbpython/
+│
+├── app.py          # Main application entry point
+├── config.py       # Configuration settings
+├── models.py       # Database connection and models
+├── test_db.py      # Script to test database connection
+├── requirements.txt # List of dependencies
+├── instance/
+│   └── config.py   # Instance-specific configuration
+└── templates/      # HTML templates
+    └── index.html
+└── static/         # Static files (CSS, JS, images)
+    └── styles.css

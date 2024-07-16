@@ -1,0 +1,48 @@
+
+ {% extends "base.html" %}
+
+
+
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+
+
+    <h1>Employee Records</h1>
+    <table border="1">
+        <tr>
+            <th>Employee ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Department</th>
+            <th>Gender</th>
+            <th>Date</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+        <td>{{ employee[0] }}</td>
+        <td>{{ employee[1] }}</td>
+        <td>{{ employee[2] }}</td>
+        <td>{{ employee[3] }}</td>
+        <td>{{ employee[4] }}</td>
+        <td>{{ employee[5] }}</td>
+
+            <td>
+                <a href="{{ url_for('edit', id=employee[0]) }}">Edit</a>
+                <form action="{{ url_for('delete', id=employee[0]) }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+    </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add Employee</title>
+</head>
+<body>
+    <h1>Add Employee</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.employee_id.label }} {{ form.employee_id }}<br>
+        {{ form.first_name.label }} {{ form.first_name }}<br>
+        {{ form.last_name.label }} {{ form.last_name }}<br>
+        {{ form.department.label }} {{ form.department }}<br>
+        {{ form.gender.label }} {{ form.gender }}<br>
+        {{ form.date.label }} {{ form.date }}<br>
+        <input type="submit" value="Add Employee">
+    </form>
+</body>
+</html>

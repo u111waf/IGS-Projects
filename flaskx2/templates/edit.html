@@ -1,0 +1,26 @@
+<!---DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body--->
+{% extends "base.html" %}
+
+{% block title %}Edit Employee{% endblock %}
+
+{% block content %}
+
+    <h1>Edit Employee</h1>
+    <form action="" method="post">
+        <input type="text" name="Firstname" placeholder="Firstname" value="{{ employee[1] }}" required>
+        <input type="text" name="Lastname" placeholder="Lastname" value="{{ employee[2] }}" required>
+        <input type="text" name="Department" placeholder="Department" value="{{ employee[3] }}" required>
+        <input type="text" name="Gender" placeholder="Gender" value="{{ employee[4] }}" required>
+        <input type="date" name="Date" placeholder="Date" value="{{ employee[5] }}" required>
+        <button type="submit">Update Employee</button>
+    </form>
+    {% endblock %}
+<!--</body>
+</html>
